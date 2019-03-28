@@ -1,54 +1,76 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+
 
 namespace RoomRservation
 {
+
     class DBConect : IDisposable
     {
+        private static String server = "localhost";
+        private static String port = "3306";
+        private static String database = "saultresort";
+        private static String username = "root";
+        private static String password = "";
 
-        private static String connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\itp\RoomRservation\RoomRservation\hotelDB.mdf;Integrated Security=True";
-        public SqlConnection con = new SqlConnection(connectionString);
-        public SqlCommand cmd;
+        private static String connectionString = "Server=" + server + ";Port=" + port + ";Database=" + database + ";Uid=" + username + ";Password=" + password + ";";
+        public MySqlConnection con = new MySqlConnection(connectionString);
+
+
 
         public DBConect()
         {
+
             try
             {
                 con.Open();
-                Console.WriteLine("DB Connected successfully");
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.StackTrace);
-                Console.WriteLine("DB Conection failed");
-            }
-        }
-
-        public bool insert(String q)
-        {
-
-            try
-            {
-                cmd = new SqlCommand(q, con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                return true;
+                Console.WriteLine("Database connected");
             }
             catch (Exception e)
             {
-
-                return false;
+                Console.WriteLine(e.StackTrace);
+                Console.WriteLine("Database Connection Failed");
+                throw new Exception();
             }
+
+
+
         }
 
 
         public void Dispose()
         {
             con.Close();
+        }
+
+        public bool insert(String query)
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                return true;
+            }catch(Exception e)
+            {
+                return false;
+            }
+        }
+        public bool update(String query)
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
         }
     }
 }

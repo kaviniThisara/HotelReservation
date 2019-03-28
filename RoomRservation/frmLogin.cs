@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,6 +66,8 @@ namespace RoomRservation
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
+
             String userName = txtUn.Text;
             String password = txtPw.Text;
             String pass = null ;
@@ -72,8 +75,8 @@ namespace RoomRservation
 
             using (DBConect db = new DBConect())
             {
-                SqlCommand cmd = new SqlCommand(q, db.con);
-                SqlDataReader r = cmd.ExecuteReader();
+                MySqlCommand cmd = new MySqlCommand(q, db.con);
+                MySqlDataReader r = cmd.ExecuteReader();
 
                 if (r.HasRows)
                 {

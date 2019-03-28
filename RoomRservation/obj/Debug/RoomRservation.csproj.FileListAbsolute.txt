@@ -12,17 +12,18 @@ E:\2nd yr 2 sem project\RoomRservation\RoomRservation\obj\Debug\RoomRservation.c
 E:\2nd yr 2 sem project\RoomRservation\RoomRservation\obj\Debug\RoomRservation.frmLogin.resources
 E:\2nd yr 2 sem project\RoomRservation\RoomRservation\bin\Debug\hotel.mdf
 E:\2nd yr 2 sem project\RoomRservation\RoomRservation\bin\Debug\hotel_log.ldf
-E:\itp\RoomRservation\RoomRservation\bin\Debug\RoomRservation.exe.config
-E:\itp\RoomRservation\RoomRservation\obj\Debug\RoomRservation.exe
-E:\itp\RoomRservation\RoomRservation\obj\Debug\RoomRservation.pdb
-E:\itp\RoomRservation\RoomRservation\bin\Debug\hotel.mdf
-E:\itp\RoomRservation\RoomRservation\bin\Debug\hotel_log.ldf
-E:\itp\RoomRservation\RoomRservation\bin\Debug\RoomRservation.exe
-E:\itp\RoomRservation\RoomRservation\bin\Debug\RoomRservation.pdb
-E:\itp\RoomRservation\RoomRservation\obj\Debug\RoomRservation.csprojResolveAssemblyReference.cache
+E:\itp\RoomRservation\RoomRservation.exe.config
 E:\itp\RoomRservation\RoomRservation\obj\Debug\RoomRservation.frmMain.resources
 E:\itp\RoomRservation\RoomRservation\obj\Debug\RoomRservation.frmLogin.resources
 E:\itp\RoomRservation\RoomRservation\obj\Debug\RoomRservation.Properties.Resources.resources
 E:\itp\RoomRservation\RoomRservation\obj\Debug\RoomRservation.csproj.GenerateResource.Cache
+E:\itp\RoomRservation\RoomRservation\bin\Debug\hotel.mdf
 E:\itp\RoomRservation\RoomRservation\bin\Debug\hotelDB.mdf
 E:\itp\RoomRservation\RoomRservation\bin\Debug\hotelDB_log.ldf
+E:\itp\RoomRservation\RoomRservation\bin\Debug\hotel_log.ldf
+E:\itp\RoomRservation\RoomRservation\bin\Debug\RoomRservation.exe.config
+E:\itp\RoomRservation\RoomRservation\bin\Debug\RoomRservation.exe
+E:\itp\RoomRservation\RoomRservation\bin\Debug\RoomRservation.pdb
+E:\itp\RoomRservation\RoomRservation\obj\Debug\RoomRservation.exe
+E:\itp\RoomRservation\RoomRservation\obj\Debug\RoomRservation.pdb
+E:\itp\RoomRservation\RoomRservation\obj\Debug\RoomRservation.csprojResolveAssemblyReference.cache
