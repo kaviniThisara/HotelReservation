@@ -341,6 +341,35 @@ namespace RoomRservation
         {
             clearAddCustomerForm();
         }
+        
+        private void btnCheckForRoomType_Click(object sender, EventArgs e)
+        {
+            dgvAvailability.DataSource = getAvailabilityForRoomType(cmbAvailableType.Text);
+        }
+
+        private DataTable getAvailabilityForRoomType(String type)
+        {
+            String q;
+            if (type.Equals(""))
+            {
+                q = "select r.RoomID as 'Room ID',r.Type as 'Room Type',c.FirstName as 'First Name', b.CheckIn as 'Check In', b.CheckOut as 'Check Out' from rooms r,room_booking b,customers c where r.RoomID = b.RoomID AND c.ContactID = b.CustomerID";
+            }else
+            {
+                q = "select r.RoomID as 'Room ID',r.Type as 'Room Type',c.FirstName as 'First Name', b.CheckIn as 'Check In', b.CheckOut as 'Check Out' from rooms r,room_booking b,customers c where r.RoomID = b.RoomID AND c.ContactID = b.CustomerID AND r.Type = '" + type + "'";
+            }
+
+            
+            DataTable dt = new DataTable();
+
+            using (DBConect db = new DBConect())
+            {
+                MySqlCommand cmd = new MySqlCommand(q, db.con);
+                MySqlDataReader r = cmd.ExecuteReader();
+
+                dt.Load(r);
+                return dt;
+            }
+        }
     }
        
 }

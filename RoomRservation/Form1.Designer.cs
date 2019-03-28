@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlNavigator = new System.Windows.Forms.Panel();
             this.btnBooking = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridViewAvailability = new System.Windows.Forms.DataGridView();
+            this.dgvAvailability = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -92,12 +93,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.chkDiscount = new System.Windows.Forms.CheckBox();
             this.btnClear = new System.Windows.Forms.Button();
+            this.cmbAvailableType = new System.Windows.Forms.ComboBox();
+            this.Check = new System.Windows.Forms.Label();
+            this.btnCheckForRoomType = new System.Windows.Forms.Button();
             this.pnlNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pnlAvailbility.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAvailability)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAvailability)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.pnlForm.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -221,7 +225,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.label8.Location = new System.Drawing.Point(811, 122);
+            this.label8.Location = new System.Drawing.Point(1024, 31);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(197, 34);
             this.label8.TabIndex = 6;
@@ -230,7 +234,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(758, 187);
+            this.pictureBox3.Location = new System.Drawing.Point(864, 80);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(357, 308);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -239,23 +243,33 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridViewAvailability);
+            this.groupBox2.Controls.Add(this.Check);
+            this.groupBox2.Controls.Add(this.btnCheckForRoomType);
+            this.groupBox2.Controls.Add(this.cmbAvailableType);
+            this.groupBox2.Controls.Add(this.dgvAvailability);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(39, 421);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(650, 216);
+            this.groupBox2.Size = new System.Drawing.Size(1150, 230);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Availability";
             // 
-            // dataGridViewAvailability
+            // dgvAvailability
             // 
-            this.dataGridViewAvailability.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAvailability.Location = new System.Drawing.Point(6, 36);
-            this.dataGridViewAvailability.Name = "dataGridViewAvailability";
-            this.dataGridViewAvailability.RowTemplate.Height = 24;
-            this.dataGridViewAvailability.Size = new System.Drawing.Size(624, 174);
-            this.dataGridViewAvailability.TabIndex = 0;
+            this.dgvAvailability.AllowUserToAddRows = false;
+            this.dgvAvailability.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgvAvailability.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAvailability.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAvailability.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvAvailability.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAvailability.Location = new System.Drawing.Point(6, 27);
+            this.dgvAvailability.Name = "dgvAvailability";
+            this.dgvAvailability.ReadOnly = true;
+            this.dgvAvailability.RowTemplate.Height = 24;
+            this.dgvAvailability.Size = new System.Drawing.Size(760, 197);
+            this.dgvAvailability.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -846,13 +860,47 @@
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // cmbAvailableType
+            // 
+            this.cmbAvailableType.FormattingEnabled = true;
+            this.cmbAvailableType.Items.AddRange(new object[] {
+            "",
+            "Suite Room",
+            "Deluxe Room",
+            "Standard Room"});
+            this.cmbAvailableType.Location = new System.Drawing.Point(776, 71);
+            this.cmbAvailableType.Name = "cmbAvailableType";
+            this.cmbAvailableType.Size = new System.Drawing.Size(193, 31);
+            this.cmbAvailableType.TabIndex = 1;
+            // 
+            // Check
+            // 
+            this.Check.AutoSize = true;
+            this.Check.Location = new System.Drawing.Point(772, 33);
+            this.Check.Name = "Check";
+            this.Check.Size = new System.Drawing.Size(328, 23);
+            this.Check.TabIndex = 2;
+            this.Check.Text = "Check Availability for room type";
+            // 
+            // btnCheckForRoomType
+            // 
+            this.btnCheckForRoomType.BackColor = System.Drawing.Color.Green;
+            this.btnCheckForRoomType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckForRoomType.Location = new System.Drawing.Point(991, 71);
+            this.btnCheckForRoomType.Name = "btnCheckForRoomType";
+            this.btnCheckForRoomType.Size = new System.Drawing.Size(136, 36);
+            this.btnCheckForRoomType.TabIndex = 8;
+            this.btnCheckForRoomType.Text = "Check";
+            this.btnCheckForRoomType.UseVisualStyleBackColor = false;
+            this.btnCheckForRoomType.Click += new System.EventHandler(this.btnCheckForRoomType_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1875, 954);
-            this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.pnlAvailbility);
+            this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.pnlNavigator);
             this.Controls.Add(this.panel1);
             this.Name = "frmMain";
@@ -864,7 +912,8 @@
             this.pnlAvailbility.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAvailability)).EndInit();
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAvailability)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.pnlForm.ResumeLayout(false);
@@ -902,7 +951,7 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnDetails;
-        private System.Windows.Forms.DataGridView dataGridViewAvailability;
+        private System.Windows.Forms.DataGridView dgvAvailability;
         private System.Windows.Forms.Panel pnlForm;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtboxContactID;
@@ -940,6 +989,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkDiscount;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label Check;
+        private System.Windows.Forms.Button btnCheckForRoomType;
+        private System.Windows.Forms.ComboBox cmbAvailableType;
     }
 }
 
