@@ -91,6 +91,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.chkDiscount = new System.Windows.Forms.CheckBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.pnlNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pnlAvailbility.SuspendLayout();
@@ -399,6 +400,7 @@
             // pnlForm
             // 
             this.pnlForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.pnlForm.Controls.Add(this.btnClear);
             this.pnlForm.Controls.Add(this.btnSearch);
             this.pnlForm.Controls.Add(this.txtboxContactID);
             this.pnlForm.Controls.Add(this.groupBox3);
@@ -582,6 +584,7 @@
             this.cmbRoom.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRoom.FormattingEnabled = true;
             this.cmbRoom.Items.AddRange(new object[] {
+            "",
             "1",
             "2",
             "3"});
@@ -595,6 +598,7 @@
             this.cmbRoomType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbRoomType.FormattingEnabled = true;
             this.cmbRoomType.Items.AddRange(new object[] {
+            "",
             "Suite Room",
             "Deluxe Room",
             "Standard Room"});
@@ -695,6 +699,7 @@
             this.txtboxContactNumber.Name = "txtboxContactNumber";
             this.txtboxContactNumber.Size = new System.Drawing.Size(195, 32);
             this.txtboxContactNumber.TabIndex = 12;
+            this.txtboxContactNumber.TextChanged += new System.EventHandler(this.txtboxContactNumber_TextChanged);
             // 
             // lblGender
             // 
@@ -829,6 +834,18 @@
             this.chkDiscount.UseVisualStyleBackColor = true;
             this.chkDiscount.CheckedChanged += new System.EventHandler(this.chkDiscount_CheckedChanged);
             // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(771, 594);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(196, 66);
+            this.btnClear.TabIndex = 33;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -922,6 +939,7 @@
         private System.Windows.Forms.Label lblPrice1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox chkDiscount;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 

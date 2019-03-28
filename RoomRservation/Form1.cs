@@ -103,11 +103,12 @@ namespace RoomRservation
             txtboxFirstName.Clear();
             txtboxLastName.Clear();
             txtboxAddress.Clear();
+            txtboxContactNumber.Clear();
 
 
 
-            cmbRoomType.SelectedValue = "";
-            cmbRoom.SelectedValue = "";
+            cmbRoomType.SelectedIndex = 0;
+            cmbRoom.SelectedIndex = 0;
 
 
 
@@ -292,19 +293,24 @@ namespace RoomRservation
         
         private void btnTotal_Click(object sender, EventArgs e)
         {
-            double discount;
+            if (Validation.validateDiscountText(txtDiscount.Text)){
+                double discount;
 
-            if (!txtDiscount.Text.Equals(""))
+                if (!txtDiscount.Text.Equals(""))
+                {
+                    discount = Double.Parse(txtDiscount.Text);
+                }
+                else
+                {
+                    discount = 1;
+                }
+                double discountPrice = Double.Parse(lblPrice1.Text) * discount / 100;
+                double totalPrice = Double.Parse(lblPrice1.Text) - discountPrice;
+                lblTotal1.Text = totalPrice.ToString();
+            }else
             {
-                discount = Double.Parse(txtDiscount.Text);
+                MessageBox.Show("Disount should be a number between 0 and 100", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                discount = 1;
-            }
-            double discountPrice = Double.Parse(lblPrice1.Text) * discount / 100;
-            double totalPrice = Double.Parse(lblPrice1.Text) - discountPrice;
-            lblTotal1.Text = totalPrice.ToString() ;
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -324,6 +330,16 @@ namespace RoomRservation
                 lblDiscount.Enabled = false;
                 txtDiscount.Enabled = false;
             }
+        }
+
+        private void txtboxContactNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            clearAddCustomerForm();
         }
     }
        
