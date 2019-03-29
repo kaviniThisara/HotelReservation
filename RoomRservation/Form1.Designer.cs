@@ -42,6 +42,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Check = new System.Windows.Forms.Label();
+            this.btnCheckForRoomType = new System.Windows.Forms.Button();
+            this.cmbAvailableType = new System.Windows.Forms.ComboBox();
             this.dgvAvailability = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -57,11 +60,18 @@
             this.label13 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.pnlForm = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtboxContactID = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.chkDiscount = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblTotal1 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.lblPrice1 = new System.Windows.Forms.Label();
             this.btnTotal = new System.Windows.Forms.Button();
             this.txtDiscount = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblDiscount = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
             this.btnViewAll = new System.Windows.Forms.Button();
@@ -86,16 +96,16 @@
             this.lblDob = new System.Windows.Forms.Label();
             this.lblContactNumber = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
-            this.lblPrice1 = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblTotal1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.chkDiscount = new System.Windows.Forms.CheckBox();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.cmbAvailableType = new System.Windows.Forms.ComboBox();
-            this.Check = new System.Windows.Forms.Label();
-            this.btnCheckForRoomType = new System.Windows.Forms.Button();
+            this.pnlHome = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pnlNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pnlAvailbility.SuspendLayout();
@@ -106,6 +116,10 @@
             this.pnlForm.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllCustomers)).BeginInit();
+            this.pnlHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlNavigator
@@ -215,9 +229,10 @@
             this.pnlAvailbility.Controls.Add(this.groupBox2);
             this.pnlAvailbility.Controls.Add(this.groupBox1);
             this.pnlAvailbility.Controls.Add(this.label13);
-            this.pnlAvailbility.Location = new System.Drawing.Point(304, 95);
+            this.pnlAvailbility.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAvailbility.Location = new System.Drawing.Point(291, 86);
             this.pnlAvailbility.Name = "pnlAvailbility";
-            this.pnlAvailbility.Size = new System.Drawing.Size(1597, 665);
+            this.pnlAvailbility.Size = new System.Drawing.Size(1584, 868);
             this.pnlAvailbility.TabIndex = 14;
             // 
             // label8
@@ -225,7 +240,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.label8.Location = new System.Drawing.Point(1024, 31);
+            this.label8.Location = new System.Drawing.Point(1359, 123);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(197, 34);
             this.label8.TabIndex = 6;
@@ -234,9 +249,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(864, 80);
+            this.pictureBox3.Location = new System.Drawing.Point(1140, 96);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(357, 308);
+            this.pictureBox3.Size = new System.Drawing.Size(416, 308);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
@@ -250,10 +265,44 @@
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(39, 421);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1150, 230);
+            this.groupBox2.Size = new System.Drawing.Size(1533, 399);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Availability";
+            // 
+            // Check
+            // 
+            this.Check.AutoSize = true;
+            this.Check.Location = new System.Drawing.Point(1075, 39);
+            this.Check.Name = "Check";
+            this.Check.Size = new System.Drawing.Size(328, 23);
+            this.Check.TabIndex = 2;
+            this.Check.Text = "Check Availability for room type";
+            // 
+            // btnCheckForRoomType
+            // 
+            this.btnCheckForRoomType.BackColor = System.Drawing.Color.Green;
+            this.btnCheckForRoomType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckForRoomType.Location = new System.Drawing.Point(1314, 118);
+            this.btnCheckForRoomType.Name = "btnCheckForRoomType";
+            this.btnCheckForRoomType.Size = new System.Drawing.Size(171, 43);
+            this.btnCheckForRoomType.TabIndex = 8;
+            this.btnCheckForRoomType.Text = "Check";
+            this.btnCheckForRoomType.UseVisualStyleBackColor = false;
+            // 
+            // cmbAvailableType
+            // 
+            this.cmbAvailableType.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAvailableType.FormattingEnabled = true;
+            this.cmbAvailableType.Items.AddRange(new object[] {
+            "",
+            "Suite Room",
+            "Deluxe Room",
+            "Standard Room"});
+            this.cmbAvailableType.Location = new System.Drawing.Point(1045, 125);
+            this.cmbAvailableType.Name = "cmbAvailableType";
+            this.cmbAvailableType.Size = new System.Drawing.Size(209, 35);
+            this.cmbAvailableType.TabIndex = 1;
             // 
             // dgvAvailability
             // 
@@ -264,11 +313,11 @@
             this.dgvAvailability.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAvailability.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvAvailability.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAvailability.Location = new System.Drawing.Point(6, 27);
+            this.dgvAvailability.Location = new System.Drawing.Point(41, 39);
             this.dgvAvailability.Name = "dgvAvailability";
             this.dgvAvailability.ReadOnly = true;
             this.dgvAvailability.RowTemplate.Height = 24;
-            this.dgvAvailability.Size = new System.Drawing.Size(760, 197);
+            this.dgvAvailability.Size = new System.Drawing.Size(853, 332);
             this.dgvAvailability.TabIndex = 0;
             // 
             // groupBox1
@@ -286,7 +335,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(39, 96);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(707, 305);
+            this.groupBox1.Size = new System.Drawing.Size(1034, 305);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Check";
@@ -296,7 +345,7 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.Green;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(116, 185);
+            this.btnAdd.Location = new System.Drawing.Point(236, 185);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(196, 66);
             this.btnAdd.TabIndex = 9;
@@ -307,7 +356,7 @@
             // 
             this.button6.BackColor = System.Drawing.Color.Green;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(389, 185);
+            this.button6.Location = new System.Drawing.Point(583, 185);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(196, 66);
             this.button6.TabIndex = 8;
@@ -321,9 +370,9 @@
             "Suite Room",
             "Deluxe Room",
             "Standard Room"});
-            this.cmbRoomTypess.Location = new System.Drawing.Point(485, 89);
+            this.cmbRoomTypess.Location = new System.Drawing.Point(711, 95);
             this.cmbRoomTypess.Name = "cmbRoomTypess";
-            this.cmbRoomTypess.Size = new System.Drawing.Size(192, 31);
+            this.cmbRoomTypess.Size = new System.Drawing.Size(217, 31);
             this.cmbRoomTypess.TabIndex = 7;
             // 
             // label9
@@ -331,7 +380,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.label9.Location = new System.Drawing.Point(336, 91);
+            this.label9.Location = new System.Drawing.Point(510, 98);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 23);
             this.label9.TabIndex = 6;
@@ -344,27 +393,27 @@
             "1",
             "2",
             "3"});
-            this.cmbRoomNo.Location = new System.Drawing.Point(155, 92);
+            this.cmbRoomNo.Location = new System.Drawing.Point(186, 90);
             this.cmbRoomNo.Name = "cmbRoomNo";
-            this.cmbRoomNo.Size = new System.Drawing.Size(157, 31);
+            this.cmbRoomNo.Size = new System.Drawing.Size(218, 31);
             this.cmbRoomNo.TabIndex = 5;
             // 
             // CheckOut
             // 
             this.CheckOut.CustomFormat = "dd-MM-yyyy";
             this.CheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.CheckOut.Location = new System.Drawing.Point(485, 29);
+            this.CheckOut.Location = new System.Drawing.Point(711, 29);
             this.CheckOut.Name = "CheckOut";
-            this.CheckOut.Size = new System.Drawing.Size(192, 32);
+            this.CheckOut.Size = new System.Drawing.Size(217, 32);
             this.CheckOut.TabIndex = 4;
             // 
             // CheckIn
             // 
             this.CheckIn.CustomFormat = "dd-MM-yyyy";
             this.CheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.CheckIn.Location = new System.Drawing.Point(155, 29);
+            this.CheckIn.Location = new System.Drawing.Point(186, 31);
             this.CheckIn.Name = "CheckIn";
-            this.CheckIn.Size = new System.Drawing.Size(157, 32);
+            this.CheckIn.Size = new System.Drawing.Size(218, 32);
             this.CheckIn.TabIndex = 3;
             // 
             // label10
@@ -372,7 +421,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.label10.Location = new System.Drawing.Point(336, 31);
+            this.label10.Location = new System.Drawing.Point(510, 34);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(119, 23);
             this.label10.TabIndex = 2;
@@ -447,27 +496,36 @@
             this.pnlForm.Size = new System.Drawing.Size(1584, 868);
             this.pnlForm.TabIndex = 15;
             // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(832, 594);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(196, 52);
+            this.btnClear.TabIndex = 33;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnSearch.Location = new System.Drawing.Point(1327, 25);
+            this.btnSearch.Location = new System.Drawing.Point(1451, 24);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(115, 33);
             this.btnSearch.TabIndex = 26;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
             // 
             // txtboxContactID
             // 
             this.txtboxContactID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxContactID.Location = new System.Drawing.Point(991, 25);
+            this.txtboxContactID.Location = new System.Drawing.Point(1115, 25);
             this.txtboxContactID.Name = "txtboxContactID";
-            this.txtboxContactID.Size = new System.Drawing.Size(320, 32);
+            this.txtboxContactID.Size = new System.Drawing.Size(313, 32);
             this.txtboxContactID.TabIndex = 9;
-            this.txtboxContactID.Text = "Search ID";
             // 
             // groupBox3
             // 
@@ -482,25 +540,78 @@
             this.groupBox3.Controls.Add(this.lblDiscount);
             this.groupBox3.Controls.Add(this.lblPrice);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox3.Location = new System.Drawing.Point(536, 68);
+            this.groupBox3.Location = new System.Drawing.Point(616, 96);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(412, 342);
             this.groupBox3.TabIndex = 32;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Payment";
             // 
+            // chkDiscount
+            // 
+            this.chkDiscount.AutoSize = true;
+            this.chkDiscount.Location = new System.Drawing.Point(28, 105);
+            this.chkDiscount.Name = "chkDiscount";
+            this.chkDiscount.Size = new System.Drawing.Size(18, 17);
+            this.chkDiscount.TabIndex = 38;
+            this.chkDiscount.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(21, 234);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 63);
+            this.button1.TabIndex = 37;
+            this.button1.Text = "Paid";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // lblTotal1
+            // 
+            this.lblTotal1.AutoSize = true;
+            this.lblTotal1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTotal1.Location = new System.Drawing.Point(168, 156);
+            this.lblTotal1.Name = "lblTotal1";
+            this.lblTotal1.Size = new System.Drawing.Size(97, 23);
+            this.lblTotal1.TabIndex = 36;
+            this.lblTotal1.Text = "nkjnkjnkj";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblTotal.Location = new System.Drawing.Point(23, 156);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(109, 23);
+            this.lblTotal.TabIndex = 35;
+            this.lblTotal.Text = "Total Price";
+            // 
+            // lblPrice1
+            // 
+            this.lblPrice1.AutoSize = true;
+            this.lblPrice1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.lblPrice1.Location = new System.Drawing.Point(168, 53);
+            this.lblPrice1.Name = "lblPrice1";
+            this.lblPrice1.Size = new System.Drawing.Size(97, 23);
+            this.lblPrice1.TabIndex = 34;
+            this.lblPrice1.Text = "nkjnkjnkj";
+            // 
             // btnTotal
             // 
             this.btnTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTotal.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnTotal.Location = new System.Drawing.Point(229, 234);
+            this.btnTotal.Location = new System.Drawing.Point(246, 225);
             this.btnTotal.Name = "btnTotal";
-            this.btnTotal.Size = new System.Drawing.Size(153, 66);
+            this.btnTotal.Size = new System.Drawing.Size(105, 66);
             this.btnTotal.TabIndex = 33;
             this.btnTotal.Text = "Total";
             this.btnTotal.UseVisualStyleBackColor = false;
-            this.btnTotal.Click += new System.EventHandler(this.btnTotal_Click);
             // 
             // txtDiscount
             // 
@@ -510,6 +621,17 @@
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(110, 32);
             this.txtDiscount.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(288, 99);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(27, 23);
+            this.label1.TabIndex = 32;
+            this.label1.Text = "%";
             // 
             // lblDiscount
             // 
@@ -538,13 +660,12 @@
             // 
             this.btnViewAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnViewAll.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAll.Location = new System.Drawing.Point(1115, 552);
+            this.btnViewAll.Location = new System.Drawing.Point(1115, 594);
             this.btnViewAll.Name = "btnViewAll";
-            this.btnViewAll.Size = new System.Drawing.Size(196, 66);
+            this.btnViewAll.Size = new System.Drawing.Size(457, 52);
             this.btnViewAll.TabIndex = 29;
             this.btnViewAll.Text = "View All";
             this.btnViewAll.UseVisualStyleBackColor = false;
-            this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click_1);
             // 
             // dgvAllCustomers
             // 
@@ -552,11 +673,11 @@
             this.dgvAllCustomers.AllowUserToDeleteRows = false;
             this.dgvAllCustomers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAllCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllCustomers.Location = new System.Drawing.Point(977, 144);
+            this.dgvAllCustomers.Location = new System.Drawing.Point(1115, 96);
             this.dgvAllCustomers.Name = "dgvAllCustomers";
             this.dgvAllCustomers.ReadOnly = true;
             this.dgvAllCustomers.RowTemplate.Height = 24;
-            this.dgvAllCustomers.Size = new System.Drawing.Size(451, 316);
+            this.dgvAllCustomers.Size = new System.Drawing.Size(451, 454);
             this.dgvAllCustomers.TabIndex = 1;
             // 
             // btnUpdate
@@ -565,19 +686,19 @@
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(307, 594);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(196, 66);
+            this.btnUpdate.Size = new System.Drawing.Size(196, 52);
             this.btnUpdate.TabIndex = 25;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(546, 594);
+            this.btnDelete.Location = new System.Drawing.Point(566, 594);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(196, 66);
+            this.btnDelete.Size = new System.Drawing.Size(196, 52);
             this.btnDelete.TabIndex = 24;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -638,7 +759,7 @@
             this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.Location = new System.Drawing.Point(61, 594);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(196, 66);
+            this.btnSubmit.Size = new System.Drawing.Size(196, 52);
             this.btnSubmit.TabIndex = 19;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -713,14 +834,13 @@
             this.txtboxContactNumber.Name = "txtboxContactNumber";
             this.txtboxContactNumber.Size = new System.Drawing.Size(195, 32);
             this.txtboxContactNumber.TabIndex = 12;
-            this.txtboxContactNumber.TextChanged += new System.EventHandler(this.txtboxContactNumber_TextChanged);
             // 
             // lblGender
             // 
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblGender.Location = new System.Drawing.Point(51, 341);
+            this.lblGender.Location = new System.Drawing.Point(57, 341);
             this.lblGender.Name = "lblGender";
             this.lblGender.Size = new System.Drawing.Size(84, 23);
             this.lblGender.TabIndex = 7;
@@ -781,126 +901,132 @@
             this.lblLastName.TabIndex = 2;
             this.lblLastName.Text = "Last Name";
             // 
-            // lblPrice1
+            // pnlHome
             // 
-            this.lblPrice1.AutoSize = true;
-            this.lblPrice1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblPrice1.Location = new System.Drawing.Point(168, 53);
-            this.lblPrice1.Name = "lblPrice1";
-            this.lblPrice1.Size = new System.Drawing.Size(97, 23);
-            this.lblPrice1.TabIndex = 34;
-            this.lblPrice1.Text = "nkjnkjnkj";
+            this.pnlHome.BackColor = System.Drawing.Color.LightGray;
+            this.pnlHome.Controls.Add(this.label6);
+            this.pnlHome.Controls.Add(this.label4);
+            this.pnlHome.Controls.Add(this.label5);
+            this.pnlHome.Controls.Add(this.label3);
+            this.pnlHome.Controls.Add(this.label2);
+            this.pnlHome.Controls.Add(this.label7);
+            this.pnlHome.Controls.Add(this.pictureBox1);
+            this.pnlHome.Controls.Add(this.pictureBox2);
+            this.pnlHome.Controls.Add(this.pictureBox5);
+            this.pnlHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.pnlHome.Location = new System.Drawing.Point(291, 86);
+            this.pnlHome.Name = "pnlHome";
+            this.pnlHome.Size = new System.Drawing.Size(1584, 868);
+            this.pnlHome.TabIndex = 34;
             // 
-            // lblTotal
+            // label6
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTotal.Location = new System.Drawing.Point(23, 156);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(109, 23);
-            this.lblTotal.TabIndex = 35;
-            this.lblTotal.Text = "Total Price";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label6.Location = new System.Drawing.Point(1157, 436);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(415, 253);
+            this.label6.TabIndex = 10;
+            this.label6.Text = resources.GetString("label6.Text");
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblTotal1
+            // label4
             // 
-            this.lblTotal1.AutoSize = true;
-            this.lblTotal1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblTotal1.Location = new System.Drawing.Point(168, 156);
-            this.lblTotal1.Name = "lblTotal1";
-            this.lblTotal1.Size = new System.Drawing.Size(97, 23);
-            this.lblTotal1.TabIndex = 36;
-            this.lblTotal1.Text = "nkjnkjnkj";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.Location = new System.Drawing.Point(613, 436);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(415, 253);
+            this.label4.TabIndex = 9;
+            this.label4.Text = resources.GetString("label4.Text");
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // button1
+            // label5
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(21, 234);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 66);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "Paid";
-            this.button1.UseVisualStyleBackColor = false;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(75, 434);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(415, 253);
+            this.label5.TabIndex = 8;
+            this.label5.Text = resources.GetString("label5.Text");
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(288, 99);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 23);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "%";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(728, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(170, 29);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Deluxe Room";
             // 
-            // chkDiscount
+            // label2
             // 
-            this.chkDiscount.AutoSize = true;
-            this.chkDiscount.Location = new System.Drawing.Point(28, 105);
-            this.chkDiscount.Name = "chkDiscount";
-            this.chkDiscount.Size = new System.Drawing.Size(18, 17);
-            this.chkDiscount.TabIndex = 38;
-            this.chkDiscount.UseVisualStyleBackColor = true;
-            this.chkDiscount.CheckedChanged += new System.EventHandler(this.chkDiscount_CheckedChanged);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(1234, 30);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(194, 29);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Standard Room";
             // 
-            // btnClear
+            // label7
             // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(771, 594);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(196, 66);
-            this.btnClear.TabIndex = 33;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(202, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(149, 29);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Suite Room";
             // 
-            // cmbAvailableType
+            // pictureBox1
             // 
-            this.cmbAvailableType.FormattingEnabled = true;
-            this.cmbAvailableType.Items.AddRange(new object[] {
-            "",
-            "Suite Room",
-            "Deluxe Room",
-            "Standard Room"});
-            this.cmbAvailableType.Location = new System.Drawing.Point(776, 71);
-            this.cmbAvailableType.Name = "cmbAvailableType";
-            this.cmbAvailableType.Size = new System.Drawing.Size(193, 31);
-            this.cmbAvailableType.TabIndex = 1;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1149, 93);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(432, 304);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
-            // Check
+            // pictureBox2
             // 
-            this.Check.AutoSize = true;
-            this.Check.Location = new System.Drawing.Point(772, 33);
-            this.Check.Name = "Check";
-            this.Check.Size = new System.Drawing.Size(328, 23);
-            this.Check.TabIndex = 2;
-            this.Check.Text = "Check Availability for room type";
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(79, 93);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(424, 300);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
-            // btnCheckForRoomType
+            // pictureBox5
             // 
-            this.btnCheckForRoomType.BackColor = System.Drawing.Color.Green;
-            this.btnCheckForRoomType.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheckForRoomType.Location = new System.Drawing.Point(991, 71);
-            this.btnCheckForRoomType.Name = "btnCheckForRoomType";
-            this.btnCheckForRoomType.Size = new System.Drawing.Size(136, 36);
-            this.btnCheckForRoomType.TabIndex = 8;
-            this.btnCheckForRoomType.Text = "Check";
-            this.btnCheckForRoomType.UseVisualStyleBackColor = false;
-            this.btnCheckForRoomType.Click += new System.EventHandler(this.btnCheckForRoomType_Click);
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(617, 93);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(427, 304);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 0;
+            this.pictureBox5.TabStop = false;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1875, 954);
-            this.Controls.Add(this.pnlAvailbility);
             this.Controls.Add(this.pnlForm);
+            this.Controls.Add(this.pnlHome);
+            this.Controls.Add(this.pnlAvailbility);
             this.Controls.Add(this.pnlNavigator);
             this.Controls.Add(this.panel1);
             this.Name = "frmMain";
@@ -921,6 +1047,11 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllCustomers)).EndInit();
+            this.pnlHome.ResumeLayout(false);
+            this.pnlHome.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -992,6 +1123,16 @@
         private System.Windows.Forms.Label Check;
         private System.Windows.Forms.Button btnCheckForRoomType;
         private System.Windows.Forms.ComboBox cmbAvailableType;
+        private System.Windows.Forms.Panel pnlHome;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
     }
 }
 

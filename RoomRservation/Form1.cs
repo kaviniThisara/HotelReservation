@@ -25,7 +25,7 @@ namespace RoomRservation
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            //pnlHome.BringToFront();
+            pnlHome.BringToFront();
         }
 
         private void btnAvailability_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace RoomRservation
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-           // pnlHome.BringToFront();
+            pnlHome.BringToFront();
         }
 
 
@@ -52,46 +52,9 @@ namespace RoomRservation
 
 
 
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
      
-
-        private void txtboxFirstName_Validating(object sender, CancelEventArgs e)
-        {
-
-            if (String.IsNullOrEmpty(txtboxFirstName.Text))
-            {
-                e.Cancel = true;
-                txtboxFirstName.Focus();
-                ErrorProvider.Equals(txtboxFirstName, "Please enter your user name !");
-
-            }
-            else
-            {
-                e.Cancel = false;
-                ErrorProvider.Equals(txtboxFirstName, null);
-
-            }
-        }
-
-        private void txtboxContactID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
        
 
 
@@ -127,34 +90,7 @@ namespace RoomRservation
 
         }
 
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtboxFirstName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-        }
-
-        private void txtboxContactNumber_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-            if ((e.KeyChar >= 5 && e.KeyChar <= 20) || e.KeyChar == 8)
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                MessageBox.Show("Please Enter Numbers only.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-                e.Handled = true;
-            }
-        }
-
-        private void pnlBookingForm_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+       
         private void btnSubmit_Click_1(object sender, EventArgs e)
         {
 
@@ -260,36 +196,6 @@ namespace RoomRservation
             return dt;
         }
 
-        private void btnUpdate_Click_1(object sender, EventArgs e)
-        {
-            ContactClass c = new ContactClass();
-            c.ContactID = Int32.Parse(txtboxContactID.Text);
-            c.FirstName = txtboxFirstName.Text;
-            c.LastName = txtboxLastName.Text;
-            c.ContactNo = txtboxContactNumber.Text;
-            c.Address = txtboxAddress.Text;
-            String gender = "";
-
-            if (radioMale.Checked)
-            {
-                gender = "Male";
-            }
-            else if (radioFemale.Checked)
-            {
-                gender = "Female";
-
-            }
-
-            c.Gender = gender;
-            c.DateOfBirth = dob.Value.ToString("yyyy-MM-dd");
-            c.RoomType = cmbRoomType.Text;
-            //  c.Room = cmbRoom.Text;
-            c.Room = Int32.Parse(cmbRoom.Text);
-
-            c.UpdateCustomer();
-
-            clearAddCustomerForm();
-        }
         
         private void btnTotal_Click(object sender, EventArgs e)
         {
@@ -369,6 +275,43 @@ namespace RoomRservation
                 dt.Load(r);
                 return dt;
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+            ContactClass c = new ContactClass();
+            c.ContactID = Int32.Parse(txtboxContactID.Text);
+            c.FirstName = txtboxFirstName.Text;
+            c.LastName = txtboxLastName.Text;
+            c.ContactNo = txtboxContactNumber.Text;
+            c.Address = txtboxAddress.Text;
+            String gender = "";
+
+            if (radioMale.Checked)
+            {
+                gender = "Male";
+            }
+            else if (radioFemale.Checked)
+            {
+                gender = "Female";
+
+            }
+
+            c.Gender = gender;
+            c.DateOfBirth = dob.Value.ToString("yyyy-MM-dd");
+            c.RoomType = cmbRoomType.Text;
+            //  c.Room = cmbRoom.Text;
+            c.Room = Int32.Parse(cmbRoom.Text);
+
+            c.UpdateCustomer();
+
+            clearAddCustomerForm();
         }
     }
        
